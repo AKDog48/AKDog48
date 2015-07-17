@@ -662,7 +662,9 @@ $ = function(win, $) {
         arguments.length == 1 && (i = p) && (p = document);
         return p.getElementsByTagName(i)
     };
-
+    $.css=function(p,i){
+    	p.style.cssText += (';'+i)
+    };
     win.onload = function() {
         var _h1 = $.c('h1')[0];
         _h1.className = '';
